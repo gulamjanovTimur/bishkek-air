@@ -1,13 +1,19 @@
-import { isServer, QueryClient } from "@tanstack/react-query";
+import {
+  isServer,
+  QueryClient,
+  type DefaultOptions,
+} from "@tanstack/react-query";
 
-const FIVE_MINUTES = 5 * 60 * 1000;
+const DEFAULT_STALE_TIME_MS = 5 * 60 * 1000;
 
-function makeQueryClient() {
+/** Creates a client with the app query defaults; `queryOverrides` replaces individual defaults (e.g. in tests). */
+export function makeQueryClient(queryOverrides?: DefaultOptions["queries"]) {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: FIVE_MINUTES,
+        staleTime: DEFAULT_STALE_TIME_MS,
         retry: 2,
+        ...queryOverrides,
       },
     },
   });
