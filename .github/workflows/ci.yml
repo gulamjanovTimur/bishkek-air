@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 
-# A new push to the same PR/branch cancels the outdated run.
+# Новый пуш в тот же PR/ветку отменяет устаревший прогон.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
@@ -44,8 +44,8 @@ jobs:
       - name: Test
         run: npm run test
 
-      # Incremental build cache: invalidated when dependencies change,
-      # falls back to the latest cache for the same lockfile when sources change.
+      # Инкрементальный кэш сборки: сбрасывается при смене зависимостей,
+      # при изменении исходников берётся последний кэш для того же lockfile.
       - name: Restore Next.js build cache
         uses: actions/cache@v6
         with:
