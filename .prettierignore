@@ -2,5 +2,5 @@
 node_modules
 package-lock.json
 next-env.d.ts
-# Docs are written by hand; keep their formatting as is.
+# Документацию пишем вручную, её форматирование не трогаем.
 *.md

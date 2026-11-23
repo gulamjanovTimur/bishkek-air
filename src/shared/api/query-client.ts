@@ -6,7 +6,7 @@ import {
 
 const DEFAULT_STALE_TIME_MS = 5 * 60 * 1000;
 
-/** Creates a client with the app query defaults; `queryOverrides` replaces individual defaults (e.g. in tests). */
+/** Создаёт клиент с настройками запросов приложения; `queryOverrides` заменяет отдельные настройки (например, в тестах). */
 export function makeQueryClient(queryOverrides?: DefaultOptions["queries"]) {
   return new QueryClient({
     defaultOptions: {
@@ -22,8 +22,8 @@ export function makeQueryClient(queryOverrides?: DefaultOptions["queries"]) {
 let browserQueryClient: QueryClient | undefined;
 
 /**
- * A fresh client per request on the server (no data shared between users),
- * a single client in the browser (survives re-renders and suspense).
+ * На сервере — новый клиент на каждый запрос (данные не делятся между пользователями),
+ * в браузере — один клиент на всё время работы (переживает ре-рендеры и suspense).
  */
 export function getQueryClient() {
   if (isServer) {

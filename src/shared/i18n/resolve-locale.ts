@@ -5,8 +5,8 @@ function isLocale(value: string): value is Locale {
 }
 
 /**
- * Picks the UI language from the language cookie value (ADR 0008).
- * The browser language is intentionally ignored: without a valid cookie the UI is in `ru`.
+ * Выбирает язык интерфейса по значению языковой cookie (ADR 0008).
+ * Язык браузера намеренно не учитывается: без корректной cookie интерфейс на `ru`.
  */
 export function resolveLocale(cookieValue: string | undefined): Locale {
   return cookieValue !== undefined && isLocale(cookieValue)

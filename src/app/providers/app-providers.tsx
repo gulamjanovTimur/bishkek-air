@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import { ClientProviders } from "./client-providers";
 
-/** Server component: next-intl passes locale, messages and time zone from `i18n/request.ts` to the client. */
+/** Серверный компонент: next-intl передаёт клиенту язык, сообщения и часовой пояс из `i18n/request.ts`. */
 export function AppProviders({ children }: { children: ReactNode }) {
   return (
     <NextIntlClientProvider>

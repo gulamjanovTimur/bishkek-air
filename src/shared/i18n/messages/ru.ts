@@ -1,4 +1,4 @@
-// Reference dictionary: its shape defines the `Messages` type that every other locale must match.
+// Эталонный словарь: его структура задаёт тип `Messages`, которому должны соответствовать остальные языки.
 export const ru = {
   meta: {
     title: "Bishkek Air",
