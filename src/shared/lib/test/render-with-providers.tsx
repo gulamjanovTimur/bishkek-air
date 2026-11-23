@@ -8,14 +8,14 @@ import { makeQueryClient } from "@/shared/api";
 import { defaultLocale, getIntlConfig } from "@/shared/i18n";
 
 interface RenderWithProvidersOptions extends Omit<RenderOptions, "wrapper"> {
-  /** Initial URL search params, e.g. `"?station=123"` or `{ station: "123" }`. */
+  /** Начальные search params URL, например `"?station=123"` или `{ station: "123" }`. */
   searchParams?: string | Record<string, string>;
 }
 
 /**
- * Renders a client component with the app providers: TanStack Query with the app defaults
- * (but no retries, so failures show up at once), next-intl with the `ru` dictionary,
- * and the nuqs testing adapter.
+ * Рендерит клиентский компонент с провайдерами приложения: TanStack Query с настройками приложения
+ * (но без повторных попыток, чтобы ошибки проявлялись сразу), next-intl со словарём `ru`
+ * и тестовый адаптер nuqs.
  */
 export function renderWithProviders(
   ui: ReactElement,

@@ -1,6 +1,6 @@
 import { messagesByLocale, timeZone, type Locale } from "./config";
 
-/** Everything next-intl needs for a locale; shared by the request config and the test providers. */
+/** Всё, что нужно next-intl для языка; общее для конфигурации запроса и тестовых провайдеров. */
 export function getIntlConfig(locale: Locale) {
   return {
     locale,
