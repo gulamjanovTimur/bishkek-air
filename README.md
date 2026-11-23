@@ -1,5 +1,7 @@
 # Bishkek Air
 
+[![CI](https://github.com/gulamjanovTimur/bishkek-air/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gulamjanovTimur/bishkek-air/actions/workflows/ci.yml)
+
 Интерактивная карта качества воздуха в Бишкеке: станции на карте, индекс AQI, карточка станции и список станций. Интерфейс на русском и английском.
 
 Данные — [World Air Quality Index (WAQI)](https://waqi.info/).
