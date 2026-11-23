@@ -1,18 +1,18 @@
-## Что сделано
+## What changed
 
-<!-- Кратко: что изменилось для пользователя / в коде -->
+<!-- Briefly: what changed for the user / in the code -->
 
 Closes #
 
-## Почему так
+## Why
 
-<!-- Ключевые решения и альтернативы. Если решение архитектурное — ссылка на ADR -->
+<!-- Key decisions and alternatives. Link the ADR if the decision is architectural -->
 
-## Как проверить
+## How to test
 
 - [ ] `npm run lint && npm run typecheck && npm run test && npm run build`
-- [ ] Шаги ручной проверки:
+- [ ] Manual test steps:
 
-## Скриншоты / замеры
+## Screenshots / measurements
 
-<!-- Для UI — скриншот или GIF, для оптимизаций — цифры до/после -->
+<!-- UI: screenshot or GIF; optimizations: before/after numbers -->
