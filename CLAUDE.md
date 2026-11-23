@@ -33,6 +33,15 @@ npm run test:e2e   # Playwright
 - Коммиты — Conventional Commits на английском: `feat(map): render stations layer`.
 - PR по шаблону `.github/pull_request_template.md`, в описании `Closes #<номер>`.
 
+### Начало работы над issue
+
+Когда работа идёт по issue (`/tdd #N`, «сделай задачу #N» и т. п.), до первого изменения файлов:
+
+1. Рабочее дерево чистое (`git status`). Если нет — остановись и спроси, что делать с изменениями.
+2. Если у issue уже есть привязанная ветка (`gh issue develop --list N`) — `git fetch` и переключись на неё: это продолжение работы.
+3. Иначе создай привязанную к issue ветку от `origin/main` и переключись на неё: `gh issue develop N --base main --name <тип>/N-<кратко> --checkout`. Тип — `feat` / `fix` / `chore` по сути задачи, `<кратко>` — 2–4 английских слова через дефис.
+4. Готово, когда `git branch --show-current` показывает эту ветку. Все коммиты задачи — только в ней.
+
 ## Правила кода
 
 - Структура — Feature-Sliced Design (см. `docs/ARCHITECTURE.md`). Импорты только сверху вниз по слоям, через public API слайса (`index.ts`).
