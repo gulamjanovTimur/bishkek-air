@@ -32,6 +32,7 @@ npm run test:e2e   # Playwright
 - Одна задача — одна ветка: `feat/<номер>-<кратко>`, `fix/<номер>-<кратко>`, `chore/<номер>-<кратко>`.
 - Коммиты — Conventional Commits на английском: `feat(map): render stations layer`.
 - PR по шаблону `.github/pull_request_template.md`, в описании `Closes #<номер>`.
+- Мерж PR — всегда squash с удалением ветки: `gh pr merge <номер> --squash --delete-branch`. Заголовок PR пишется как Conventional Commit: при squash он становится единственным коммитом задачи в `main`.
 
 ### Начало работы над issue
 
