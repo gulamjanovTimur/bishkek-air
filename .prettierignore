@@ -1,0 +1,6 @@
+.next
+node_modules
+package-lock.json
+next-env.d.ts
+# Docs are written by hand; keep their formatting as is.
+*.md

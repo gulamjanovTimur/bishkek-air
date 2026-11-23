@@ -20,7 +20,7 @@
 
 ## Структура
 
-Роутинг Next лежит в корневой `app/` и остаётся тонким. Весь код — в слоях Feature-Sliced Design в `src/`. Раз в корне есть `app/`, Next не трактует `src/app` и `src/pages` как роутинг (в тикете с каркасом проверить, что сборка их не подхватывает).
+Роутинг Next лежит в корневой `app/` и остаётся тонким. Весь код — в слоях Feature-Sliced Design в `src/`. Next ищет `app/` и `pages/` сначала в корне, затем в `src/`. Корневая `app/` скрывает `src/app`. Чтобы так же скрыть `src/pages`, в корне лежит пустая папка `pages/` (только README). Без неё Next принимает `src/pages` за Pages Router, и сборка падает.
 
 ```
 app/                          # роутинг Next: только реэкспорт и вызовы из src/
@@ -29,6 +29,7 @@ app/                          # роутинг Next: только реэкспо
   api/
     stations/route.ts         # GET → список станций Бишкека (доменный формат)
     stations/[uid]/route.ts   # GET → детали станции (доменный формат)
+pages/                        # пустая (README): не даёт Next принять src/pages за Pages Router
 i18n/
   request.ts                  # next-intl: язык из cookie, по умолчанию ru
 src/
